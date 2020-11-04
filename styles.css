@@ -1,0 +1,16 @@
+.item {
+  color: brown;
+}
+
+#gallery {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.gallery-item {
+  width: 100%;
+  text-align: center;
+}
+.gallery-item img {
+  width: 300px;
+}
