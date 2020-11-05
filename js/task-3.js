@@ -21,11 +21,9 @@ const gallery = document.getElementById("gallery");
 const galleryItems = images.map(el => {
     const item = document.createElement('li');
     item.classList.add("gallery-item");
-    const alt = el.alt.split('').join('');
-    console.log(alt);
+    const { url, alt } = el;
     item.insertAdjacentHTML('afterbegin',
-        `<img src = ${el.url}
-     alt="${alt}">`);
+        `<img src = ${url} alt="${alt}" class = 'item-img'>`);
     return item;
 });
 

@@ -6,11 +6,30 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  list-style: none;
 }
 .gallery-item {
   width: 100%;
-  text-align: center;
 }
-.gallery-item img {
+
+.item-img {
+  display: block;
   width: 300px;
+  margin: 15px auto;
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+.task7-container{
+  height: 120px;
 }
