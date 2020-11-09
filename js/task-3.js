@@ -18,16 +18,36 @@ const images = [
 
 const gallery = document.getElementById("gallery");
 
-const galleryItems = images.map(el => {
+
+
+// Without insertAdjacentHTML() method 
+
+
+const galleryItems2 = images.map(el => {
+    const { url, alt } = el;
+
     const item = document.createElement('li');
     item.classList.add("gallery-item");
-    const { url, alt } = el;
-    item.insertAdjacentHTML('afterbegin',
-        `<img src = ${url} alt="${alt}" class = 'item-img'>`);
+
+    const img = document.createElement('img');
+    img.src = url;
+    img.alt = alt;
+    img.classList.add("item-img");
+
+    item.appendChild(img);
+
     return item;
 });
 
-gallery.append(...galleryItems);
+gallery.append(...galleryItems2);
+
+// With insertAdjacentHTML() method 
+
+const galleryItems = images.reverse().map(el => {
+    const { url, alt } = el;
+    return gallery.insertAdjacentHTML('afterbegin',
+        `<li class = "gallery-item"><img src = ${url} alt="${alt}" class = 'item-img'></li>`);
+});
 
 
 
