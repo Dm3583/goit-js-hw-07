@@ -24,9 +24,7 @@ const createBoxes = (amount) => {
         let box = document.createElement('div');
         box.style.width = size + 'px';
         box.style.height = size + 'px';
-        box.style.borderWidth = 3 + 'px';
-        box.style.borderStyle = 'solid';
-        box.style.borderColor = `rgb(${randomColor()},${randomColor()},${randomColor()})`;
+        box.style.border = `3px solid rgb(${randomColor()},${randomColor()},${randomColor()})`
         boxesArr.push(box);
         size += 10;
     }
