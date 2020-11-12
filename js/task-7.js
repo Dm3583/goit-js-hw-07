@@ -9,6 +9,6 @@ fontSizeControl.setAttribute('max', 60);
 fontSizeControl.setAttribute('value', fSize);
 
 fontSizeControl.addEventListener('input', () => {
-    fSize = (event.target.value);
+    fSize = event.target.value;
     textSpan.style.fontSize = fSize + "px"
 })

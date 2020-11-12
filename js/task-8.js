@@ -8,7 +8,9 @@ const boxes = document.getElementById('boxes');
 
 const randomColor = () => Math.floor(Math.random() * 256);
 
-const boxesArr = [];
+// const boxesArr = [];
+
+let boxesArr = [];
 
 const createBoxes = (amount) => {
     let size = 30;
@@ -26,7 +28,8 @@ const createBoxes = (amount) => {
 
 const destroyBoxes = () => {
     inpField.value = '';
-    boxesArr.splice(0, boxesArr.length)
+    boxesArr = [];
+    // boxesArr.splice(0, boxesArr.length)
     boxes.innerHTML = '';
 };
 

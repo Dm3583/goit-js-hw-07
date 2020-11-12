@@ -49,5 +49,14 @@ const galleryItems = images.reverse().map(el => {
         `<li class = "gallery-item"><img src = ${url} alt="${alt}" class = 'item-img'></li>`);
 });
 
+// With insertAdjacentHTML() method 2
+
+const galleryItems3 = images.reverse().map(el => {
+    const { url, alt } = el;
+    return `<li class = "gallery-item"><img src = ${url} alt="${alt}" class = 'item-img'></li>`
+}).reduce((a, b) => a + b, '');
+
+console.log(galleryItems3);
 
 
+gallery.insertAdjacentHTML('afterbegin', galleryItems3);
